@@ -1,6 +1,4 @@
 <?php
-
-
 session_start();
 if($_SESSION['logIn']==true){
     header("location:../View/main.php");
@@ -39,9 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $_SESSION['email'] = $mail;
             $_SESSION['password'] = $password;
             $_SESSION['id'] = $id;
+            $_SESSION['error']=false;
             header('location:../View/main.php');
         } else {
-            echo "Nie masz uprawnień";
+            $_SESSION['error']=true;
         }
     }
 }
