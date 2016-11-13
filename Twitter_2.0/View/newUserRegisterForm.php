@@ -1,5 +1,11 @@
 <?php
 session_start();
+    if(isset($_SESSION['wrongEmail'])){
+        if($_SESSION['wrongEmail']==true){
+       $warning="Ten e-mail jest już zarejestrowany.";
+    }
+   
+   }
 
 ?>
 
@@ -43,7 +49,7 @@ session_start();
 
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-default">Rejestruję się</button>
+                    <button type="submit" class="btn btn-default">Rejestruję się</button><?php echo $warning?>
                 </div>
             </div>
         </form>
