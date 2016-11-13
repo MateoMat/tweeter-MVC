@@ -15,14 +15,14 @@ session_unset();
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Mateusz strona prywatna</title>
+        <title>Projekt Tweerker</title>
         <link href="sources/css/bootstrap.min.css" rel="stylesheet">
         <link href="sources/css/simple-sidebar.css" rel="stylesheet">
     </head>
 
     <body>
 
-                        <a href="../index.php" class="jumbotron">
+                        <a href="../index.php" class="btn">
                             <h2>Poprawnie wylogowano z systemu.<br></h2>
                             
                         </a>
