@@ -1,6 +1,10 @@
 <?php
 session_start();
-//require_once '../Model/database.php';
+if (isset($_SESSION['error'])) {
+    if ($_SESSION['error'] == true) {
+        $error = "Nieprawidłowy login lub hasło";
+    }
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -16,7 +20,7 @@ session_start();
         <link rel="Stylesheet" type="text/css" href="../sources/css/bootstrap.css" />
     </head>
     <body>
-        
+
         <form class="form-horizontal" action="../Controller/loginVerification.php" method="POST">
             <div class="jumbotron center">
                 <h1 style="text-align:left; margin-left: 10px;margin-right:20px; " >&nbsp&nbsp    Witaj w projekcie Tweerker</h1>
@@ -39,11 +43,12 @@ session_start();
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Log</button>
                     <a href="newUserRegisterForm.php" class="btn btn-info">Kliknij,aby utworzyć nowe konto</a>
+                    <?php echo $error; ?>
                 </div>
             </div>
         </form>
-        
-        
+
+
 
 
 
