@@ -38,9 +38,12 @@ session_start();
             <div class="form-group"> 
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-default">Log</button>
+                    <a href="newUserRegisterForm.php" class="btn btn-info">Kliknij,aby utworzyć nowe konto</a>
                 </div>
             </div>
         </form>
+        
+        
 
 
 
